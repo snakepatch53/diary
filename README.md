@@ -41,7 +41,8 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
     # PROJECT
     HTTP_DOMAIN = http://localhost/diary/
     HTML_LANG = 'en'
-    APP_NAME = 'erazobrothers'
+    HTML_TITLE = 'Diary'
+    APP_NAME = 'diary'
     APP_STATE = 'development'
 
     # MYSQLI
