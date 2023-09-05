@@ -1,0 +1,318 @@
+@font-face {
+    src: url('./../font.general/Oregano-Regular.ttf');
+    font-family: Oregano-Regular;
+}
+
+@font-face {
+    src: url('./../font.general/Nunito-Regular.ttf');
+    font-family: Nunito-Regular;
+}
+
+* {
+    --header-height: 45px;
+    --sidebar-width: 250px;
+    --sidebar-width-minimize: 70px;
+}
+
+img {
+    pointer-events: all;
+}
+
+body {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: var(--header-height) 1fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+    /*    overflow: hidden;*/
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+main {
+    grid-area: main;
+    overflow-y: auto !important;
+    height: 100%;
+}
+
+.header,
+.sidebar,
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.header .header-user-photo {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.header .dropdown-user-photo {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+
+body.sidebar-minimize {
+    --sidebar-width: var(--sidebar-width-minimize);
+    transition: all 1s ease;
+}
+
+body.sidebar-minimize .sidebar .nav-option {
+    text-align: center !important;
+}
+
+body.sidebar-minimize .sidebar .nav-option span {
+    display: none;
+}
+
+.gift-image-modal-table {
+    width: 40px;
+    height: 30px;
+    object-fit: contain;
+}
+
+
+.checkbox {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    border: solid 1px #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkbox:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    display: block;
+    width: calc(50% - 10px);
+    height: calc(100% - 10px);
+    margin: auto;
+    border-radius: 50%;
+    background: #ccc;
+    transition: all 0.3s ease;
+}
+
+input[value="true"] ~ .checkbox,
+input[value="1"] ~ .checkbox {
+    background: #4f93ff;
+    transition: all 0.3s ease;
+}
+
+input[value="true"] ~ .checkbox:before,
+input[value="1"] ~ .checkbox:before {
+    left: unset;
+    right: 5px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+
+.input-file {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-file:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: attr(placeholder);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #2fa4e7;
+    color: #ffffff;
+}
+
+.slider-img {
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 16/9;
+}
+
+
+.avatar {
+    width: 40px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.avatar.no-rounded {
+    border-radius: 5px;
+}
+
+.avatar.xl {
+    width: 70px;
+}
+
+.avatar.cover {
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+
+
+
+
+
+.input_switch {
+    display: flex;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+}
+
+.input_switch input {
+    display: none;
+}
+
+
+.input_switch label {
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.input_switch input:checked + label {
+    background: #39a9e8;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.userfoto {
+    width: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    object-position: center;
+    box-shadow: 0 0 5px 0 #39a9e8;
+    background: #ffffff;
+    padding: 2px;
+}
+
+
+
+
+
+.header li.li-togle-dark {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.header button.btn-darkmode {
+    position: relative;
+    display: flex;
+    gap: 3px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50px;
+    background: #000;
+    transition: all 0.2s ease;
+}
+
+.header button.btn-darkmode:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2px;
+    content: '';
+    display: block;
+    height: calc(100% - 4px);
+    aspect-ratio: 1/1;
+    margin: auto;
+    background: #bcbcbc;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+body.dark .header button.btn-darkmode:before {
+    background: #414141;
+    left: unset;
+    right: 2px;
+    transition: all 0.2s ease;
+}
+
+body.dark .header button.btn-darkmode {
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.header button.btn-darkmode svg,
+.header button.btn-darkmode svg {
+    display: block;
+    aspect-ratio: 1/1;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.header button.btn-darkmode svg {
+    color: #000;
+}
+
+.header button.btn-darkmode svg {
+    color: #ffd347;
+}
+
+.color-important-svg,
+.color-important-svg * {
+    color: var(--color) !important;
+}
+
+.template-color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    padding: 2px;
+    background: #000000;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.template-color .color {
+    flex: 1;
+    background: var(--color);
+    display: flex;
+    height: 100%;
+    padding: 1px;
+}
+
+main .card-body .logo {
+    width: 100%;
+    height: 100%;
+}
+    
+main .card-body .logo svg {
+    width: 100%;
+    height: 100%;
+}

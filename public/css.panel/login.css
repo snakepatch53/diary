@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --txt-message: var(--danger);
+
+    --bg-form: var(--color4);
+    --txt-form: var(--color4-text);
+    --bg-filter: var(--color6);
+
+    --c2-bg: var(--color4);
+    --c2-txt: var(--color4-text);
+
+    --bg-icon: var(--color2);
+    --txt-icon: var(--color2-text2);
+
+    --bg-logo-s1: var(--color4-logo-s1);
+    --bg-logo-s2: var(--color4-logo-s2);
+    --bg-logo-s3: var(--color4-logo-s3);
+    --txt-logo: var(--color4-logo-text);
+
+    --bg-btn: var(--color1);
+    --txt-btn: var(--color1-text);
+
+
+
+
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+}
+
+main:before {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    content: '';
+    background: var(--bg-filter);
+    opacity: 0.7;
+}
+
+body.loading .load {
+    max-width: 100%;
+    max-height: 100vh;
+    opacity: 1;
+    transition: all 0.1s ease;
+}
+
+.load {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 0;
+    height: 100%;
+    max-height: 0;
+    margin: auto;
+    opacity: 0;
+    background: var(--c2-bg);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: all 0.1s ease;
+}
+
+.load i {
+    color: var(--c2-txt);
+    font-size: 2rem;
+}
+
+body img.bg {
+    /*
+    display: block;
+    width: 100%;
+    height: 100%;
+*/
+    object-fit: cover;
+    object-position: bottom;
+}
+
+
+main #imgrain {
+    width: 100%;
+    height: 100vh;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    width: 100%;
+    height: 100vh;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: var(--padding);
+}
+
+.modal .container {
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    /*
+    height: 100%;
+    max-height: 600px;
+*/
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+    background: var(--bg-form);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 30px;
+    width: 100%;
+}
+
+form .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-decoration: none;
+}
+
+form .logo svg {
+    height: 100%;
+    aspect-ratio: 1/1;
+    --s1: var(--bg-logo-s1);
+    --s2: var(--bg-logo-s2);
+    --s3: var(--bg-logo-s3);
+}
+
+form .logo img {
+    width: 100%;
+    max-width: 90px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+form .logo h1 {
+    display: inline !important;
+    text-align: left;
+    width: 160px;
+    font-family: logo;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 10px;
+    color: var(--txt-logo);
+}
+
+form .input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form .row {
+    display: flex;
+    border: solid 1px #cccccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+form label {
+    color: var(--txt-form);
+    font-family: titulo;
+}
+
+form .icon {
+    color: var(--txt-icon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: var(--bg-icon);
+}
+
+form .icon.right {
+    cursor: pointer;
+}
+
+form .icon.right.show .show,
+form .icon.right .hide {
+    display: none;
+}
+
+form .icon.right.show .hide {
+    display: block;
+}
+
+form .row input {
+    flex: 1;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+
+form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: var(--bg-btn);
+    opacity: 0.9;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    color: var(--txt-btn);
+    cursor: pointer;
+}
+
+form button:hover {
+    background: var(--bg-btn);
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+
+form button i {
+    color: var(--txt-btn);
+}
+
+
+form .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20px;
+    color: var(--txt-message);
+}

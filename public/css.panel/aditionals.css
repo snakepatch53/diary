@@ -1,0 +1,93 @@
+.inputswitch {
+    --c1_bg: var(--color4);
+    --c1_txt: var(--color4-text);
+    --c2_bg: var(--color1);
+    --c2_txt: var(--color1-text);
+
+    display: block;
+    width: 100%;
+/*    max-width: 150px;*/
+    background: var(--c1_bg);
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.inputswitch .inputswitch-input {
+    display: none;
+}
+
+.inputswitch .visual {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.inputswitch .visual:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: var(--c2_bg);
+    opacity: 0.95;
+}
+
+.inputswitch .visual .si,
+.inputswitch .visual .no {
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--c1_txt);
+    padding: 6px 0;
+    font-family: roboto;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.inputswitch .inputswitch-input-no:checked ~ .visual:before {
+    left: 50%;
+}
+
+.inputswitch .inputswitch-input-si:checked ~ .visual .si {
+    color: var(--c2_txt);
+}
+
+.inputswitch .inputswitch-input-no:checked ~ .visual .no {
+    color: var(--c2_txt);
+}
+
+.inputswitch .visual .no {}
+
+
+
+/*campana*/
+.bell {
+    font-size: 1.5rem;
+}
+
+.bell-si path{
+    color: var(--success) !important;
+}
+
+.bell-no path {
+    color: var(--warn) !important;
+    
+}
+
+
+/*TASK TABLE*/
+
+
+.task-status-0 {
+    background: rgba(255, 165, 0, 0.2);
+}
+
+.task-status-1 {
+    background: rgba(7, 92, 137, 0.31);
+}

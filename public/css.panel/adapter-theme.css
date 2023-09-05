@@ -1,0 +1,249 @@
+body {
+    --c1-bg: var(--color1);
+    --c1-txt: var(--color1-text);
+
+    --c2-bg: var(--color6);
+    --c2-txt: var(--color6-text2);
+    --c2-txt2: var(--color6-text);
+
+    --c3-bg: var(--color4);
+    --c3-txt: var(--color4-text);
+    --c3-txt2: var(--color4-text2);
+    --c3-logo-s1: var(--color4-logo-s1);
+    --c3-logo-s2: var(--color4-logo-s2);
+    --c3-logo-s3: var(--color4-logo-s3);
+
+    --c4-bg: var(--color2);
+    --c4-txt: var(--color2-text);
+
+    --c5-bg: var(--color5);
+    --c5-txt: var(--color5-text);
+}
+
+main {
+    background: var(--c3-bg);
+}
+
+.sidebar {
+    position: relative;
+    background: var(--c2-bg) !important;
+}
+.sidebar .logo svg {
+    background: var(--c3-bg);
+    --s1: var(--c3-logo-s1);
+    --s2: var(--c3-logo-s2);
+    --s3: var(--c3-logo-s3);
+}
+
+.header-dropdown-menu .p-relative .img-bg,
+.sidebar .img-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sidebar .burguer-button,
+.sidebar-header h4 {
+    color: var(--c2-txt);
+}
+
+.sidebar .nav-option:hover,
+.sidebar .nav-option.active {
+    background: var(--c4-bg);
+    color: var(--c4-txt) !important;
+}
+
+.sidebar .nav-option:not(.active) {
+    color: var(--c2-txt);
+}
+
+.header {
+    background: var(--c1-bg) !important;
+}
+
+.header-user-btn {
+    color: var(--c1-txt);
+}
+
+.header-user-btn img {
+    background: var(--c3-bg);
+    padding: 1px;
+}
+
+.dropdown-user-photo {
+    background: var(--c3-bg);
+}
+
+.header-dropdown-menu {
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header-dropdown-menu .p-relative {
+    background: var(--c2-bg);
+    padding: 10px;
+    position: relative;
+}
+
+.header-dropdown-menu span {
+    color: var(--c2-txt) !important;
+    text-shadow: 1px 1px 1px var(--c2-txt2);
+    letter-spacing: 0.7px;
+}
+
+.header-dropdown-menu button {
+    background: var(--c1-bg);
+    color: var(--c1-txt);
+    border: none;
+    padding: 10px 0 !important;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.header-dropdown-menu button:hover {
+    background: var(--c1-bg);
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+
+.header-dropdown-menu hr {
+    color: var(--c1-bg);
+}
+
+
+/*form*/
+.input-file:before {
+    background: var(--info) !important;
+    color: #ffffff !important;
+    transition: all 0.2s ease;
+}
+
+.input-file:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+
+/*main*/
+
+main nav .breadcrumb li a {
+    color: var(--c3-txt) !important;
+}
+
+main .card.shadow {
+    background: var(--c3-bg);
+    border-color: var(--c3-txt);
+}
+
+
+/*aqui esta el problema para cambiar de color a los iconos en social media y contacts*/
+main .card.shadow thead * {
+    background: var(--c5-bg);
+    color: var(--c5-txt) !important;
+}
+
+main .card.shadow tbody tr {
+    cursor: pointer;
+}
+
+main .card.shadow tbody tr * {
+    color: var(--c3-txt);
+}
+
+main #element-gallery button {
+    background: var(--danger);
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+main #element-gallery button * {
+    color: #ffffff !important;
+}
+
+main #element-gallery button:hover {
+    transition: all 0.2s ease;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+main .card.shadow button.btn-outline-success,
+main .card.shadow button.btn-outline-success * {
+    border-color: var(--success);
+    color: var(--success) !important;
+}
+
+main .card.shadow button.btn-outline-primary,
+main .card.shadow button.btn-outline-primary * {
+    border-color: var(--info);
+    color: var(--info) !important;
+}
+
+main .card.shadow button.btn-outline-danger,
+main .card.shadow button.btn-outline-danger * {
+    border-color: var(--danger);
+    color: var(--danger) !important;
+}
+
+main .card.shadow button.btn-outline-success:hover {
+    background: var(--success);
+}
+
+main .card.shadow button.btn-outline-primary:hover {
+    background: var(--info);
+}
+
+main .card.shadow button.btn-outline-danger:hover {
+    background: var(--danger);
+}
+
+main .card.shadow button.btn-outline-success:hover *,
+main .card.shadow button.btn-outline-primary:hover *,
+main .card.shadow button.btn-outline-danger:hover * {
+    color: #ffffff !important;
+}
+
+
+
+
+#element-modalform .modal-content {
+    background: var(--c3-bg);
+}
+
+#element-modalform .modal-content h5 {
+    color: var(--c3-txt);
+}
+
+#element-modalform .modal-content label.form-label {
+    color: var(--c3-txt2);
+}
+
+#element-modalform .modal-content .modal-footer .btn.btn-primary {
+    background: var(--info);
+    border-color: var(--info);
+}
+
+#element-modalform .modal-content .modal-footer .btn.btn-secondary {
+    background: var(--danger);
+    border-color: var(--danger);
+}
+
+#element-modalform .modal-content .modal-footer .btn.btn-primary,
+#element-modalform .modal-content .modal-footer .btn.btn-secondary {
+    color: #ffffff;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+#element-modalform .modal-content .modal-footer .btn.btn-primary:hover,
+#element-modalform .modal-content .modal-footer .btn.btn-secondary:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
