@@ -3,7 +3,7 @@ $_TEMPLATE_SERVICES_PATH = './src/services/';
 $radapter = new RAdapter($router, $_TEMPLATE_SERVICES_PATH, $_ENV['HTTP_DOMAIN']);
 
 // CONFIGURATION
-$radapter->getHTML('/api/config', 'configuration');
+// $radapter->getHTML('/api/config', 'configuration');
 
 // USER
 $radapter->post('/api/user/login', fn (...$args) => UserService::login(...$args));

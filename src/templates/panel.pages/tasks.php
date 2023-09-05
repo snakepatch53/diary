@@ -37,9 +37,9 @@
                             <tr>
                                 <th class="d-none d-md-table-cell" scope="col">#</th>
                                 <th class="text-center text-md-left" scope="col">Name</th>
-                                <th class="d-none d-md-table-cell" scope="col">Status</th>
-                                <th class="d-none d-md-table-cell" scope="col">Notify</th>
-                                <th class="d-none d-md-table-cell" scope="col">Date</th>
+                                <th class="text-center d-none d-md-table-cell" scope="col">Status</th>
+                                <th class="text-center d-none d-md-table-cell" scope="col">Notify</th>
+                                <th class="text-center d-none d-md-table-cell" scope="col">Date</th>
                                 <th class="text-center" scope="col">Actions</th>
                             </tr>
                         </thead>
