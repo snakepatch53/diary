@@ -3,21 +3,16 @@
 ## 📋 DATOS GENERALES
 
 <ul>
-    <li><b>Cliente:</b> ✅ Constructora Erazo Brother's</li>
     <li><b>Estado:</b> 🚧 En desarrollo</li>
     <li><b>Version:</b> 🚀 1.0.0</li>
-    <li><b>Nombre:</b> 😎 Constructora Erazo Brother's</li>
+    <li><b>Nombre:</b> 😎 Diary</li>
 </ul>
 
 ## 📋 DESCRIPCION
 
 <p>
-    Esta es una pagina web para la constructora Erazo Brother's, la cual se encarga de la construccion de casas y edificios en USA.
-    <br><br>
-    Esta desarrollada bajo las tecnologias web principales: <b>HTML5, CSS3, JS, PHP, MYSQL</b>
-    <br><br>
-    El lenguaje de programacion principal es <b>PHP</b> y el gestor de base de datos es <b>MYSQL</b>
-    <br><br>
+    Esta es una pequeña aplicacion web que permite llevar un registro de las actividades diarias de una persona, con el fin de que pueda llevar un control de sus actividades y poder mejorar su productividad.
+    Las notificaciones de este sistema funcionan por separado en un servidor desarrollado en node js que se encarga de enviar las notificaciones a los usuarios por whatsapp.
 </p>
 
 ## 📝 LICENCIA
@@ -44,18 +39,17 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
 
 ```env
     # PROJECT
-    HTTP_DOMAIN = http://localhost/constructora/
+    HTTP_DOMAIN = http://localhost/diary/
     HTML_LANG = 'en'
     APP_NAME = 'erazobrothers'
     APP_STATE = 'development'
-    APP_ACCESS_TOKEN = {{CREATE YOUR PERSONAL ACCESS TOKEN}}
 
     # MYSQLI
-    DB_HOST =
-    DB_USER =
+    DB_HOST = localhost
+    DB_USER = root
     DB_PASS =
-    DB_NAME =
-    DB_PORT =
+    DB_NAME = diary
+    DB_PORT = 3306
 ```
 
 ## 🐬 MYSQL
